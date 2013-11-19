@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from g15daemon import g15screen
 from PIL import Image
 from PIL import ImageDraw
@@ -34,10 +35,10 @@ def get_frame():
 	text = "Low:  " + data['data']['low']['display']
 	d_usr.text((0,10), text,(0,0,0))
 	
-	text = "Buy:  " + data['data']['high']['display']
+	text = "Buy:  " + data['data']['buy']['display']
 	d_usr.text((0,20), text,(0,0,0))
 	
-	text = "Sell: " + data['data']['high']['display']
+	text = "Sell: " + data['data']['sell']['display']
 	d_usr.text((0,30), text,(0,0,0))
 	
 	text = data['data']['last_local']['display']
